@@ -494,7 +494,7 @@ def restart_xui() -> None:
 
 
 def build_links(user_uuid: str, domain: str, routes: List[Dict[str, Any]]) -> Dict[str, str]:
-    base_url = f"https://sub.cmliussss.net/{user_uuid}/sub"
+    base_url = f"https://sniweb.danfeng.eu.org/{user_uuid}/sub"
     common = {
         "domain": domain,
         "epd": "yes",
@@ -507,7 +507,7 @@ def build_links(user_uuid: str, domain: str, routes: List[Dict[str, Any]]) -> Di
     for route in routes:
         protocol = route["protocol"]
         params = dict(common)
-        params["ev"] = "no"
+        params["ev"] = "yes"
         params["et"] = "no"
         params["evm"] = "no"
         params[PROTOCOL_QUERY_FLAG[protocol]] = "yes"
