@@ -93,7 +93,7 @@ def get_public_ipv4() -> str:
     for url in providers:
         try:
             with request.urlopen(url, timeout=8) as resp:
-                ip_text = resp.read().decode("utf-8").strip()
+                ip_text = resp.read()。decode("utf-8").strip()
             ipaddress.IPv4Address(ip_text)
             return ip_text
         except error.HTTPError as e:
@@ -494,7 +494,7 @@ def restart_xui() -> None:
 
 
 def build_links(user_uuid: str, domain: str, routes: List[Dict[str, Any]]) -> Dict[str, str]:
-    base_url = f"https://sniweb.danfeng.eu.org/{user_uuid}/sub"
+    base_url = f"https://sub.cmliussss.net/{user_uuid}/sub"
     common = {
         "domain": domain,
         "epd": "yes",
